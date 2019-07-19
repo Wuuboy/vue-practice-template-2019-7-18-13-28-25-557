@@ -1,20 +1,24 @@
 <template>
     <div id="app">     
-        <input v-model="countersNumber" placeholder="input the number of counters"> 
+        <input v-model.number="countersNumber" placeholder="input the number of counters"> 
         <p>The counters number is :{{countersNumber}}</p>
+        <br>
+        <Counter v-for="item in countersNumber" :key="item"></Counter>
     </div>
 </template>
 
 <script>
+import Counter from './Counter.vue'
 export default {
   name: 'countersNumber',
+  components:{Counter},
   data(){
-     return{countersNumber:''}   
-  },        
-//   methods:{          
-//       reduce:function(){this.count--},          
-//       add:function(){this.count++}        
-//   }      
+    return{
+        countersNumber:0,
+     }   
+  },       
+  methods:{           
+  }      
 }
 </script>
 
