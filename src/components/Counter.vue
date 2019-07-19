@@ -15,7 +15,12 @@ export default {
   methods:{          
       reduce:function(){this.count--},          
       add:function(){this.count++}        
-  }      
+  },
+  watch:{
+    count:function(newValue, oldvalue){
+        this.$emit('changeSum',newValue-oldvalue)
+    }
+  }     
 }
 </script>
 
