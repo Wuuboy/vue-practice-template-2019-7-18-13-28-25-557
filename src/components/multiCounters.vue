@@ -7,7 +7,14 @@
 
 <script>
 export default {
-    
+  name: 'countersNumber',
+  data(){
+     return{countersNumber:''}   
+  },        
+//   methods:{          
+//       reduce:function(){this.count--},          
+//       add:function(){this.count++}        
+//   }      
 }
 </script>
 
