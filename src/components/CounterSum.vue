@@ -1,15 +1,16 @@
 <template>
     <div id="app">     
-        <p>The counters sum number is :{{sum}}</p>
+        <p>The counters sum number is :{{$store.state.sum}}</p>
     </div>
 </template>
 
 <script>
 export default {
   name: 'multiCounters',
-  props:['sum'],
+  // props:['sum'],
   data(){
     return{
+      // sum:0
      }   
   },       
   methods:{           

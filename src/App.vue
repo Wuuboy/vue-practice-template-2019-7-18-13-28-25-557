@@ -7,6 +7,7 @@
 
 
 <script>
+// import multiCounters from './components/multiCounters.vue'
 import multiCounters from './components/multiCounters.vue'
 
 export default {

@@ -7,20 +7,22 @@
 </template>
 
 <script>
+
 export default {
   name: 'Counter',
   data(){
      return{count:0}   
   },        
   methods:{          
-      reduce:function(){this.count--},          
-      add:function(){this.count++}        
-  },
-  watch:{
-    count:function(newValue, oldvalue){
-        this.$emit('changeSum',newValue-oldvalue)
-    }
-  }     
+      reduce:function(){
+          this.count--;
+          this.$store.commit('reduce',1);
+      },       
+      add:function(){
+          this.count++;
+        this.$store.commit('add',1);
+        }   
+  }    
 }
 </script>
 

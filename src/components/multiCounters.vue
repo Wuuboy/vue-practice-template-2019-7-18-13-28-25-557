@@ -4,7 +4,8 @@
         <p>The counters number is :{{countersNumber}}</p>
         <br>
         <Counter v-for="item in countersNumber" :key="item" @changeSum="changeSum"></Counter>
-        <CounterSum :sum= "sum"></CounterSum>
+        <!-- <CounterSum :sum= "sum"></CounterSum> -->
+        <CounterSum ></CounterSum>
     </div>
 </template>
 
@@ -22,7 +23,7 @@ export default {
   },       
   methods:{   
         changeSum:function(changeCounter){
-            this.sum += changeCounter;
+            this.$store.commit('changeSum',changeCounter);
         }      
   }      
 }
